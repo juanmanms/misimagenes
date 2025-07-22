@@ -37,7 +37,57 @@
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Opcional: Para mantener aspect ratio cuadrado */
-.imagenes-container img {
-    aspect-ratio: 1 / 1;
+/* Efecto lupa solo para escritorio */
+@media (min-width: 1024px) {
+    .imagen-zoom-container {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        cursor: zoom-in;
+    }
+
+    .imagen-zoom-container img {
+        transition: transform 0.3s ease;
+        transform-origin: center;
+    }
+
+    .imagen-zoom-container:hover img {
+        transform: scale(1.5);
+    }
+
+    /* Lupa con zoom específico en punto del cursor */
+    .imagen-lupa {
+        position: relative;
+        overflow: hidden;
+        cursor: none;
+    }
+
+    .imagen-lupa img {
+        transition: none;
+    }
+
+    .lupa-zoom {
+        position: absolute;
+        border: 3px solid #fff;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        background-repeat: no-repeat;
+        background-size: 300% 300%;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .imagen-lupa:hover .lupa-zoom {
+        opacity: 1;
+    }
+}
+
+/* Fancybox solo para móvil y tablet */
+@media (max-width: 1023px) {
+    .imagen-clickable {
+        cursor: pointer;
+    }
 }

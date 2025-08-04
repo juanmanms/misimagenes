@@ -37,6 +37,14 @@
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
+.titulo {
+    justify-self: center;
+}
+
+.fancybox-title.fancybox-title-float-wrap {
+    visibility: hidden !important;
+}
+
 /* Efecto lupa solo para escritorio */
 @media (min-width: 1024px) {
     .imagen-zoom-container {

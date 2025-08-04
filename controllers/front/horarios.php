@@ -14,7 +14,8 @@ class MisImagenesHorariosModuleFrontController extends ModuleFrontController
         $this->context->smarty->assign(array(
             'imagenes' => $imagenes,
             'ruta_publica' => _PS_IMG_ . 'horarios/',
-            'titulo' => $this->l('Horarios'),
+            'titulo' => $this->l('Horaris'),
+            'banner' => _PS_IMG_ . '/banner.jpg', // Ruta al banner
         ));
 
         // Usar una plantilla personalizada

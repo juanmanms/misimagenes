@@ -1,7 +1,12 @@
 {extends file='page.tpl'} {* Hereda header/footer *}
 
-{block name='page_content'}
-    <h1>{$titulo}</h1>
+{block name='page_content_container'}
+    <!-- Banner en la parte superior -->
+    <div class="banner-container">
+        <img src="{$banner}" alt="Banner" class="banner-img" />
+    </div>
+
+    <h1 class="titulo">{$titulo}</h1>
     <div class="imagenes-container">
         {foreach from=$imagenes item=img}
             <a href="{$ruta_publica}{$img}" class="fancybox" data-fancybox="galeria" title="{$img}">
@@ -19,9 +24,7 @@
                     openEffect: 'fade',
                     closeEffect: 'fade',
                     helpers: {
-                        title: {
-                            type: 'inside'
-                        }
+                        title: null // Deshabilitar el título
                     }
                 });
             }

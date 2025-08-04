@@ -15,6 +15,8 @@ class MisImagenesActivitatsModuleFrontController extends ModuleFrontController
             'imagenes' => $imagenes,
             'ruta_publica' => _PS_IMG_ . 'activitats/', // Ruta pública accesible desde la web
             'titulo' => $this->l('Activitats'),
+            'banner' => _PS_IMG_ . '/banner.jpg', // Ruta al banner
+
         ]);
 
         // Usar plantilla (puedes reutilizar la misma o crear una nueva)

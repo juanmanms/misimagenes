@@ -1,11 +1,6 @@
 {extends file='page.tpl'} {* Hereda header/footer *}
 
 {block name='page_content_container'}
-    <!-- Banner en la parte superior -->
-    <div class="banner-container">
-        <img src="{$banner}" alt="Banner" class="banner-img" />
-    </div>
-
     <h1 class="titulo">{$titulo}</h1>
     <div class="imagenes-container">
         {foreach from=$imagenes item=img}

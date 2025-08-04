@@ -45,6 +45,11 @@
     visibility: hidden !important;
 }
 
+#wrapper .breadcrumb[data-depth="1"] {
+    display: block !important;
+}
+
+
 /* Efecto lupa solo para escritorio */
 @media (min-width: 1024px) {
     .imagen-zoom-container {

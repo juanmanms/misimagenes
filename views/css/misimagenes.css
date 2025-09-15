@@ -39,15 +39,12 @@
 
 .titulo {
     justify-self: center;
+    margin: 2% 0;
 }
 
 .fancybox-title.fancybox-title-float-wrap {
     visibility: hidden !important;
 }
-
-/* #wrapper .breadcrumb[data-depth="1"] {
-    display: block !important;
-} */
 
 
 /* Efecto lupa solo para escritorio */

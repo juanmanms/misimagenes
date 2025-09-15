@@ -22,4 +22,14 @@ class MisImagenesActivitatsModuleFrontController extends ModuleFrontController
         // Usar plantilla (puedes reutilizar la misma o crear una nueva)
         $this->setTemplate('module:misimagenes/views/templates/front/mostrar.tpl');
     }
+
+    public function getBreadcrumbLinks()
+    {
+        $breadcrumb = parent::getBreadcrumbLinks();
+        $breadcrumb['links'][] = [
+            'title' => $this->l('Activitats'),
+            'url'   => $this->context->link->getModuleLink($this->module->name, 'activitats'),
+        ];
+        return $breadcrumb;
+    }
 }

@@ -45,9 +45,9 @@
     visibility: hidden !important;
 }
 
-#wrapper .breadcrumb[data-depth="1"] {
+/* #wrapper .breadcrumb[data-depth="1"] {
     display: block !important;
-}
+} */
 
 
 /* Efecto lupa solo para escritorio */

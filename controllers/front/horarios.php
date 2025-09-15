@@ -21,4 +21,14 @@ class MisImagenesHorariosModuleFrontController extends ModuleFrontController
         // Usar una plantilla personalizada
         $this->setTemplate('module:misimagenes/views/templates/front/mostrar.tpl');
     }
+
+    public function getBreadcrumbLinks()
+    {
+        $breadcrumb = parent::getBreadcrumbLinks();
+        $breadcrumb['links'][] = [
+            'title' => $this->l('Horaris'),
+            'url'   => $this->context->link->getModuleLink($this->module->name, 'horarios'),
+        ];
+        return $breadcrumb;
+    }
 }
